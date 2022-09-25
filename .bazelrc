@@ -1,0 +1,12 @@
+# needs to be c++2a instead of c++20 for some reason
+build --cxxopt=-std=c++2a
+
+build --compilation_mode=opt
+
+# "opt" build defaults to -O2: override with -O3
+build --copt -O3
+
+build --copt -Wall
+build --copt -Wextra
+build --copt -Wshadow
+build --copt -Wno-unused-parameter
